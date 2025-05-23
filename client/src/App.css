@@ -1,0 +1,97 @@
+/* client/src/App.css */
+
+/* Import Google Fonts (Fredoka One for titles, Poppins for body) */
+/* These are also linked in index.html, but @import ensures CSS context */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* CSS Custom Properties for Style Guide Colors */
+:root {
+  --color-tomato: #FF6347;
+  --color-gold: #FFD700;
+  --color-limegreen: #32CD32;
+  --color-steelblue: #4682B4;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --font-primary: 'Poppins', sans-serif;
+  --font-headings: 'Fredoka One', cursive;
+  --background-light: #f0f8ff; /* AliceBlue - a light, kid-friendly background */
+}
+
+/* Global Resets and Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--background-light);
+  color: #333; /* Default dark text color for readability */
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Headings Styling */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  color: var(--color-tomato); /* Tomato for headers */
+  margin-bottom: 0.75em; /* Spacing below headings */
+}
+
+/* Links Styling */
+a {
+  text-decoration: none;
+  color: var(--color-steelblue); /* SteelBlue for links */
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-tomato);
+  text-decoration: underline;
+}
+
+/* Main App Container Styling */
+.app-container {
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center container */
+  padding: 20px; /* Padding around content */
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Basic Button Styling (can be expanded) */
+button {
+  font-family: var(--font-primary);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--color-steelblue);
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #3a6a93; /* Darker SteelBlue */
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
